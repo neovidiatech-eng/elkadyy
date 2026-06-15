@@ -1,0 +1,98 @@
+<!--
+  ╔══════════════════════════════════════════════════════════════════╗
+  ║  COMPONENT: contact-form.html                                    ║
+  ║  الاستخدام: انسخ هذا الكود في أي صفحة تحتاج نموذج تواصل مباشر   ║
+  ║  الكلاسات في: style.css (CONTACT FORM section)                   ║
+  ╚══════════════════════════════════════════════════════════════════╝
+-->
+<section id="contact-form" class="contact-form-section contact-form-section--solid watermark-bg contact-form-watermark home-glow-section home-glow-section--full home-glow-section--borderless">
+  <div class="container fade-in">
+    <header class="section-header text-center contact-form-header">
+      <p class="section-subtitle accent-text contact-form-kicker">تواصل مباشر</p>
+      <h2 class="section-title contact-form-title">بيانات التواصل</h2>
+    </header>
+
+    <div class="form-wrapper contact-form-card">
+      <h3 class="contact-form-card-title">راسلنا الآن!</h3>
+      <p class="contact-form-card-intro">
+        اترك لنا رسالة مع الاستفسار الخاص بك، وسنقوم بالتواصل معك في أقرب وقت ممكن.
+      </p>
+
+      <form class="contact-form-stack">
+        <!-- Select Service -->
+        <div class="form-group">
+          <select class="contact-field contact-field--select">
+            <option value="" disabled selected>اختر الخدمة</option>
+            <option value="dataflow">تقديم الداتا فلو</option>
+            <option value="mumaris">ممارس بلس</option>
+            <option value="prometric">حجز امتحان البرومترك</option>
+            <option value="pearson">حجز امتحان البيرسون فيو</option>
+            <option value="training">دورات التأهيل</option>
+            <option value="datacheck">داتا تشيك (Data Check)</option>
+            <option value="mosadaqa">المصادقة (Mosadaqa)</option>
+            <option value="saudi-auth">الاعتماد المهني السعودي</option>
+            <option value="other">استفسار عام</option>
+          </select>
+        </div>
+
+        <!-- Select Specialty -->
+        <div class="form-group">
+          <select class="contact-field contact-field--select">
+            <option value="" disabled selected>اختر التخصص الطبي</option>
+            <option value="doctors">الأطباء</option>
+            <option value="pharmacists">الصيادلة</option>
+            <option value="specialist">أخصائي</option>
+            <option value="physiotherapy">علاج طبيعي</option>
+            <option value="nursing-specialist">أخصائي تمريض</option>
+            <option value="medical-sciences">علوم طبية وعلوم</option>
+            <option value="nursing-tech">فني تمريض وفنيين</option>
+          </select>
+        </div>
+
+        <!-- Select Country -->
+        <div class="form-group">
+          <select class="contact-field contact-field--select">
+            <option value="" disabled selected>اختر الدولة</option>
+            <option value="saudi">السعودية</option>
+            <option value="uae">الإمارات</option>
+            <option value="bahrain">البحرين</option>
+            <option value="oman">عمان</option>
+            <option value="kuwait">الكويت</option>
+            <option value="qatar">قطر</option>
+          </select>
+        </div>
+
+        <!-- Name -->
+        <div class="form-group">
+          <input type="text" placeholder="الاسم" class="contact-field">
+        </div>
+
+        <!-- Phone -->
+        <div class="form-group">
+          <input type="tel" placeholder="رقم الهاتف" class="contact-field">
+        </div>
+
+        <!-- Email -->
+        <div class="form-group">
+          <input type="email" placeholder="البريد الإلكتروني" class="contact-field">
+        </div>
+
+        <!-- Message -->
+        <div class="form-group">
+          <textarea placeholder="رسالتك" rows="4" class="contact-field contact-field--textarea"></textarea>
+        </div>
+
+        <!-- Disclaimer -->
+        <p class="contact-form-note">
+          حماية بياناتك أمر مهم بالنسبة لنا. سيتم حفظ جميع المعلومات الواردة وفقًا لسياسة الخصوصية بغرض معالجة طلبك
+          فقط والتعامل معها بسرية تامة. من خلال إرسال هذه الرسالة، فإنك توافق على قراءة بيان الخصوصية الخاص بنا.
+        </p>
+
+        <!-- Submit Button -->
+        <button type="submit" class="contact-form-submit">
+          إرسال الرسالة
+        </button>
+      </form>
+    </div>
+  </div>
+</section>

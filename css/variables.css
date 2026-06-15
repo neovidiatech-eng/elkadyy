@@ -1,0 +1,129 @@
+/* ═══════════════════════════════════════════════════════════════════
+   VARIABLES.CSS — Design Tokens (المتغيرات العامة)
+   المرجع: الصفحة الرئيسية (index.html)
+   ─────────────────────────────────────────────────────────────────
+   أي تعديل هنا ينعكس فوراً على جميع الصفحات.
+   ═══════════════════════════════════════════════════════════════════ */
+
+:root {
+  /* ─── Colors ─── */
+  --color-primary: #ff8c00;
+  --color-primary-light: #ffa54d;
+  --color-primary-glow: rgba(255, 140, 0, 0.4);
+
+  --color-bg-dark: #050505;
+  --color-bg-darker: #020202;
+  --color-bg-card: rgba(20, 20, 20, 0.7);
+  --color-bg-section: #1a1a1a;
+  --color-bg-footer: #0a0a0a;
+
+  --color-text-white: #ffffff;
+  --color-text-muted: rgba(255, 255, 255, 0.65);
+  --color-text-body: rgba(255, 255, 255, 0.76);
+
+  --color-success: #22c55e;
+  --color-danger: #ef4444;
+
+  --color-glass-border: rgba(255, 255, 255, 0.08);
+  --color-glass-bg: rgba(5, 5, 5, 0.4);
+
+  /* ─── Fonts ─── */
+  --font-primary: "Almarai", sans-serif;
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+
+  /* ─── Spacing ─── */
+  --space-section: clamp(4rem, 10vw, 8rem);
+  --space-container: clamp(1.25rem, 5vw, 2.5rem);
+  --space-container-width: 1500px;
+
+  /* ─── Shadows ─── */
+  --shadow-card: 0 30px 60px rgba(0, 0, 0, 0.6);
+  --shadow-glow-primary: 0 0 20px rgba(255, 140, 0, 0.3);
+  --shadow-section: 0 24px 56px rgba(0, 0, 0, 0.38),
+    0 0 0 1px rgba(255, 140, 0, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+
+  /* ─── Border Radius ─── */
+  --radius-pill: 100px;
+  --radius-card: 16px;
+  --radius-section: 18px;
+  --radius-button: 999px;
+
+  /* ─── Transitions ─── */
+  --transition-snappy: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-luxury: all 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  --transition: var(--transition-luxury);
+
+  /* ─── Glow Lines (Section Decoration) ─── */
+  --glow-line: linear-gradient(
+    90deg,
+    rgba(255, 140, 0, 0),
+    rgba(255, 190, 100, 1) 20%,
+    #ffffff 50%,
+    rgba(255, 190, 100, 1) 80%,
+    rgba(255, 140, 0, 0)
+  );
+  --glow-line-thin: linear-gradient(
+    90deg,
+    rgba(255, 140, 0, 0),
+    rgba(255, 140, 0, 0.8) 15%,
+    rgba(255, 200, 120, 1) 50%,
+    rgba(255, 140, 0, 0.8) 85%,
+    rgba(255, 140, 0, 0)
+  );
+  --glow-vertical: linear-gradient(
+    180deg,
+    rgba(255, 140, 0, 0) 0%,
+    rgba(255, 190, 100, 0.8) 30%,
+    #ffffff 50%,
+    rgba(255, 190, 100, 0.8) 70%,
+    rgba(255, 140, 0, 0) 100%
+  );
+
+  /* ─── Section Card Backgrounds ─── */
+  --bg-content-section: linear-gradient(
+      180deg,
+      rgba(255, 140, 0, 0.08),
+      transparent 18%,
+      transparent 82%,
+      rgba(255, 140, 0, 0.08)
+    ),
+    rgba(20, 20, 20, 0.78);
+  --border-content-section: 1px solid rgba(255, 140, 0, 0.42);
+  --glow-line-section: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.7),
+      transparent
+    ),
+    linear-gradient(90deg, transparent, var(--color-primary), transparent);
+  --glow-line-shadow: 0 0 18px rgba(255, 140, 0, 0.55),
+    0 0 34px rgba(255, 140, 0, 0.22);
+
+  /* ─── Breakpoints (reference only — CSS can't use vars in @media) ─── */
+  /* Mobile:  max-width: 480px  */
+  /* Tablet:  max-width: 768px  */
+  /* Desktop: max-width: 1024px */
+  /* Wide:    max-width: 1100px */
+  /* Extra:   max-width: 1200px */
+
+  /* ═══ Legacy aliases (backward compatibility) ═══ */
+  --primary: var(--color-primary);
+  --primary-light: var(--color-primary-light);
+  --primary-glow: var(--color-primary-glow);
+  --bg-dark: var(--color-bg-dark);
+  --bg-darker: var(--color-bg-darker);
+  --bg-card: var(--color-bg-card);
+  --text-white: var(--color-text-white);
+  --text-muted: var(--color-text-muted);
+  --container-width: var(--space-container-width);
+  --section-padding: var(--space-section);
+  --container-padding: var(--space-container);
+  --glass-border: var(--color-glass-border);
+  --glass-bg: var(--color-glass-bg);
+  --card-shadow: var(--shadow-card);
+  --primary-font: var(--font-primary);
+}

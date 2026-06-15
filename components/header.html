@@ -1,0 +1,178 @@
+<!--
+  ╔══════════════════════════════════════════════════════════════════╗
+  ║  COMPONENT: header.html                                          ║
+  ║  الاستخدام: انسخ هذا الكود في بداية كل صفحة بعد <body>          ║
+  ║  الكلاسات في: css/style.css (HEADER section)                     ║
+  ╚══════════════════════════════════════════════════════════════════╝
+
+  التخصيص لكل صفحة:
+  - غير الرابط النشط في nav-list بإضافة class="active" على الـ <a>
+  - الـ aria-label و meta هنا للمرجع فقط — ضعها في <head>
+
+-->
+<header class="main-header">
+  <div class="container header-container">
+    <div class="logo">
+      <a href="index.html">
+        <img src="images/logo-1.png" alt="القاضي للترخيص الطبي" class="logo-img" loading="eager" />
+      </a>
+    </div>
+
+    <!-- Desktop Navigation -->
+    <nav class="desktop-nav" role="navigation" aria-label="القائمة الرئيسية">
+      <ul class="nav-list">
+        <li><a href="index.html">الرئيسية</a></li>
+
+        <li class="has-dropdown">
+          <a href="services.html">خدماتنا <i class="fas fa-chevron-down" aria-hidden="true"></i></a>
+          <ul class="dropdown">
+            <li class="has-sub-dropdown">
+              <a href="#">الداتا فلو <i class="fas fa-chevron-left inline-chevron" aria-hidden="true"></i></a>
+              <ul class="sub-dropdown">
+                <li><a href="#">داتا فلو | السعودية</a></li>
+                <li><a href="#">داتا فلو | الإمارات</a></li>
+                <li><a href="#">داتا فلو | عمان</a></li>
+                <li><a href="#">داتا فلو | البحرين</a></li>
+                <li><a href="#">داتا فلو | الكويت</a></li>
+                <li><a href="#">داتا فلو | قطر</a></li>
+              </ul>
+            </li>
+            <li><a href="#">برومترك</a></li>
+            <li class="has-sub-dropdown">
+              <a href="#">الدورات التدريبية <i class="fas fa-chevron-left inline-chevron" aria-hidden="true"></i></a>
+              <ul class="sub-dropdown">
+                <li><a href="#">كورس برومترك وبيرسون فيو صيدلة</a></li>
+              </ul>
+            </li>
+            <li><a href="#">بيرسون فيو</a></li>
+            <li><a href="#">ممارس بلس</a></li>
+            <li><a href="#">شهادات الخبرة وتوثيقها</a></li>
+            <li><a href="#">شرح البرومترك</a></li>
+            <li><a href="#">المصادقة | السعودية</a></li>
+            <li><a href="#">الاعتماد المهني</a></li>
+            <li><a href="#">انجاز وتساهيل</a></li>
+          </ul>
+        </li>
+
+        <li class="has-dropdown">
+          <a href="gulf-medical-guide.html#gulf-countries">دول الخليج <i class="fas fa-chevron-down" aria-hidden="true"></i></a>
+          <ul class="dropdown">
+            <li><a href="gulf-medical-guide.html#gulf-countries">السعودية</a></li>
+            <li class="has-sub-dropdown">
+              <a href="gulf-medical-guide.html#gulf-countries">الإمارات <i class="fas fa-chevron-left" aria-hidden="true"></i></a>
+              <ul class="sub-dropdown">
+                <li><a href="gulf-medical-guide.html#gulf-countries">أبو ظبي</a></li>
+                <li><a href="gulf-medical-guide.html#gulf-countries">دبي</a></li>
+                <li><a href="gulf-medical-guide.html#gulf-countries">الشمالية</a></li>
+              </ul>
+            </li>
+            <li><a href="gulf-medical-guide.html#gulf-countries">البحرين</a></li>
+            <li><a href="gulf-medical-guide.html#gulf-countries">عمان</a></li>
+            <li><a href="gulf-medical-guide.html#gulf-countries">الكويت</a></li>
+            <li><a href="gulf-medical-guide.html#gulf-countries">قطر</a></li>
+          </ul>
+        </li>
+
+        <li class="has-dropdown">
+          <a href="medical-specialties.html">التخصصات الطبية <i class="fas fa-chevron-down" aria-hidden="true"></i></a>
+          <ul class="dropdown">
+            <li><a href="medical-specialties.html#medical-specialties">الأطباء</a></li>
+            <li><a href="medical-specialties.html#medical-specialties">الصيادلة</a></li>
+            <li><a href="medical-specialties.html#medical-specialties">أخصائي</a></li>
+            <li><a href="medical-specialties.html#medical-specialties">علاج طبيعي</a></li>
+            <li><a href="medical-specialties.html#medical-specialties">أخصائي تمريض</a></li>
+            <li><a href="medical-specialties.html#medical-specialties">علوم طبية وعلوم</a></li>
+            <li><a href="medical-specialties.html#medical-specialties">فني تمريض وفنيين</a></li>
+          </ul>
+        </li>
+
+        <li><a href="index.html#about">من نحن</a></li>
+        <li><a href="index.html#contact-form">تواصل معنا</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-actions">
+      <a href="index.html#contact-form" class="btn-nav">اتصل بنا</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="فتح القائمة" aria-expanded="false" aria-controls="sidebar">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Sidebar (Mobile Navigation) -->
+<nav class="sidebar" id="sidebar" aria-label="قائمة الجوال" aria-hidden="true">
+  <button class="menu-close" id="menuClose" aria-label="إغلاق القائمة">&times;</button>
+  <div class="sidebar-logo">
+    <a href="index.html">
+      <img src="images/logo-1.png" alt="القاضي للترخيص الطبي" loading="lazy" />
+    </a>
+  </div>
+  <ul class="nav-links">
+    <li><a href="index.html">الرئيسية</a></li>
+    <li class="has-dropdown-sidebar">
+      <a href="#" class="sidebar-dropdown-toggle">خدماتنا</a>
+      <ul class="sidebar-submenu">
+        <li class="has-dropdown-sidebar">
+          <a href="#" class="sidebar-dropdown-toggle">الداتا فلو</a>
+          <ul class="sidebar-submenu">
+            <li><a href="#">داتا فلو | السعودية</a></li>
+            <li><a href="#">داتا فلو | الإمارات</a></li>
+            <li><a href="#">داتا فلو | عمان</a></li>
+            <li><a href="#">داتا فلو | البحرين</a></li>
+            <li><a href="#">داتا فلو | الكويت</a></li>
+            <li><a href="#">داتا فلو | قطر</a></li>
+          </ul>
+        </li>
+        <li><a href="#">برومترك</a></li>
+        <li class="has-dropdown-sidebar">
+          <a href="#" class="sidebar-dropdown-toggle">الدورات التدريبية</a>
+          <ul class="sidebar-submenu">
+            <li><a href="#">كورس برومترك وبيرسون فيو صيدلة</a></li>
+          </ul>
+        </li>
+        <li><a href="#">بيرسون فيو</a></li>
+        <li><a href="#">ممارس بلس</a></li>
+        <li><a href="#">شهادات الخبرة وتوثيقها</a></li>
+        <li><a href="#">شرح البرومترك</a></li>
+        <li><a href="#">المصادقة | السعودية</a></li>
+        <li><a href="#">الاعتماد المهني</a></li>
+        <li><a href="#">انجاز وتساهيل</a></li>
+      </ul>
+    </li>
+    <li class="has-dropdown-sidebar">
+      <a href="gulf-medical-guide.html#gulf-countries" class="sidebar-dropdown-toggle">دول الخليج</a>
+      <ul class="sidebar-submenu">
+        <li><a href="gulf-medical-guide.html#gulf-countries">السعودية</a></li>
+        <li><a href="gulf-medical-guide.html#gulf-countries">الإمارات أبو ظبي</a></li>
+        <li><a href="gulf-medical-guide.html#gulf-countries">الإمارات دبي</a></li>
+        <li><a href="gulf-medical-guide.html#gulf-countries">الإمارات الشمالية</a></li>
+        <li><a href="gulf-medical-guide.html#gulf-countries">البحرين</a></li>
+        <li><a href="gulf-medical-guide.html#gulf-countries">عمان</a></li>
+        <li><a href="gulf-medical-guide.html#gulf-countries">الكويت</a></li>
+        <li><a href="gulf-medical-guide.html#gulf-countries">قطر</a></li>
+      </ul>
+    </li>
+    <li class="has-dropdown-sidebar">
+      <a href="medical-specialties.html" class="sidebar-dropdown-toggle">التخصصات الطبية</a>
+      <ul class="sidebar-submenu">
+        <li><a href="medical-specialties.html#medical-specialties">الأطباء</a></li>
+        <li><a href="medical-specialties.html#medical-specialties">الصيادلة</a></li>
+        <li><a href="medical-specialties.html#medical-specialties">أخصائي</a></li>
+        <li><a href="medical-specialties.html#medical-specialties">علاج طبيعي</a></li>
+        <li><a href="medical-specialties.html#medical-specialties">أخصائي تمريض</a></li>
+        <li><a href="medical-specialties.html#medical-specialties">علوم طبية وعلوم</a></li>
+        <li><a href="medical-specialties.html#medical-specialties">فني تمريض وفنيين</a></li>
+      </ul>
+    </li>
+    <li><a href="index.html#about">من نحن</a></li>
+    <li><a href="index.html#contact-form">تواصل معنا</a></li>
+    <li><hr class="sidebar-divider" /></li>
+    <li class="sidebar-cta-item">
+      <a href="index.html#contact-form" class="btn btn-primary">اتصل بنا</a>
+    </li>
+  </ul>
+</nav>
+<div class="sidebar-overlay" id="sidebarOverlay"></div>

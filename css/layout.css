@@ -1,0 +1,459 @@
+/* ═══════════════════════════════════════════════════════════════════
+   LAYOUT.CSS — Containers, Sections, Grids, Hero
+   ─────────────────────────────────────────────────────────────────
+   يحتوي على: الحاويات، أنواع السكاشن، الهيرو، الشبكات
+   ═══════════════════════════════════════════════════════════════════ */
+
+/* ═══ Containers ═══ */
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+.container-full {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 3%;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 0 5%;
+  }
+}
+
+/* ═══ Section Base ═══ */
+section {
+  padding: var(--section-padding) 0;
+}
+
+@media (max-width: 768px) {
+  .section-header {
+    margin-bottom: 3.5rem;
+  }
+
+  .services-grid,
+  .comparison-grid,
+  .analysis-wrapper,
+  .pricing-grid {
+    gap: 2rem;
+  }
+}
+
+/* ═══ Home Hero (index.html) ═══ */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  color: var(--text-white);
+  padding-top: 80px;
+}
+
+.hero-bg-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 15%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.hero-mobile-img {
+  display: none !important;
+}
+
+@media (max-width: 768px) {
+  .hero-desktop-img {
+    display: none !important;
+  }
+
+  .hero-mobile-img {
+    display: block !important;
+    object-position: center center !important;
+  }
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0.4) 50%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  max-width: 1100px;
+  padding: 2rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.hero-main {
+  animation: fadeInUp 1.2s cubic-bezier(0.22, 1, 0.36, 1) both;
+  text-align: center;
+  background: rgba(18, 18, 18, 0.45);
+  backdrop-filter: blur(25px) saturate(180%);
+  -webkit-backdrop-filter: blur(25px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 40px;
+  padding: 4rem 3rem;
+  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.6);
+  max-width: 850px;
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.8rem;
+}
+
+.hero-logo-large {
+  height: clamp(80px, 15vw, 140px);
+  width: auto;
+  filter: drop-shadow(0 0 20px rgba(255, 140, 0, 0.3));
+  transition: var(--transition-luxury);
+}
+
+.hero-main:hover .hero-logo-large {
+  transform: scale(1.05);
+}
+
+.hero-title {
+  font-size: clamp(1rem, 2.5vw, 2rem);
+  line-height: 1.4;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  color: var(--text-white);
+}
+
+.location {
+  line-height: 1.4;
+  font-weight: 400;
+  font-size: clamp(1.5rem, 2.5vw, 3.2rem);
+}
+
+.hero-subtitle {
+  font-size: clamp(1rem, 3vw, 1.5rem);
+  color: var(--text-muted);
+  margin-bottom: 2.5rem;
+  max-width: 800px;
+  line-height: 1.9;
+}
+
+@media (max-width: 768px) {
+  .hero-main {
+    padding: 2.5rem 1.5rem;
+    border-radius: 25px;
+    gap: 1rem;
+  }
+
+  .hero-actions > div {
+    flex-direction: column !important;
+  }
+
+  .hero-actions > div .btn {
+    width: 100%;
+  }
+}
+
+.special-whatsapp {
+  padding: 1.2rem 1.5rem;
+  white-space: nowrap;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .special-whatsapp {
+    padding: 1rem 1.2rem;
+  }
+  .special-whatsapp span {
+    font-size: clamp(0.7rem, 2.8vw, 0.9rem) !important;
+    white-space: nowrap !important;
+  }
+}
+
+/* ═══ Home Glow Section (Bordered Sections on Home page) ═══ */
+.home-glow-section {
+  --panel-fill: linear-gradient(
+    180deg,
+    rgba(53, 35, 16, 0.96) 0%,
+    rgba(28, 20, 12, 0.98) 45%,
+    rgba(15, 15, 15, 0.99) 100%
+  );
+  --glow-inset: 32px;
+  --glow-offset-top: 24px;
+  --glow-offset-bottom: 24px;
+  position: relative;
+  width: min(1360px, calc(100% - 40px));
+  margin: 0 auto 44px;
+  border: 3px solid rgba(255, 140, 0, 0.6);
+  border-radius: 30px;
+  background: var(--glow-line) center top var(--glow-offset-top) /
+      calc(100% - (var(--glow-inset) * 2)) 8px no-repeat,
+    var(--glow-line-thin) center top calc(var(--glow-offset-top) + 14px) /
+      calc(100% - (var(--glow-inset) * 2) - 80px) 2px no-repeat,
+    var(--glow-line) center bottom var(--glow-offset-bottom) /
+      calc(100% - (var(--glow-inset) * 2)) 8px no-repeat,
+    var(--glow-line-thin) center bottom
+      calc(var(--glow-offset-bottom) + 14px) /
+      calc(100% - (var(--glow-inset) * 2) - 80px) 2px no-repeat,
+    var(--panel-fill);
+  box-shadow: 0 28px 60px rgba(0, 0, 0, 0.5),
+    inset 0 4px 20px rgba(255, 140, 0, 0.2),
+    0 0 20px rgba(255, 140, 0, 0.3);
+  overflow: hidden;
+}
+
+.home-glow-section:not(.contact-form-watermark)::before,
+.home-glow-section::after {
+  display: none !important;
+}
+
+.home-glow-section .container {
+  position: relative;
+  z-index: 1;
+}
+
+.home-glow-section--full {
+  width: 100vw !important;
+  max-width: 100vw !important;
+  margin-left: calc(50% - 50vw) !important;
+  margin-right: calc(50% - 50vw) !important;
+  border-radius: 0 !important;
+  overflow: visible !important;
+}
+
+.home-glow-section--viewport {
+  width: 100vw !important;
+  max-width: 100vw !important;
+  margin-left: calc(50% - 50vw) !important;
+  margin-right: calc(50% - 50vw) !important;
+  border-radius: 0;
+}
+
+.home-glow-section--borderless {
+  --panel-fill: linear-gradient(180deg, #161616 0%, #101010 100%);
+  --glow-inset: 0px;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+@media (max-width: 768px) {
+  .home-glow-section {
+    --glow-inset: 18px;
+    --glow-offset-top: 20px;
+    --glow-offset-bottom: 20px;
+    width: min(100%, calc(100% - 20px));
+    border-radius: 20px;
+    margin-bottom: 24px;
+  }
+  .home-glow-section--full {
+    width: 100%;
+    border-radius: 0;
+  }
+}
+
+/* ═══ Content Section (Bordered card sections on inner pages) ═══
+   توحيد: .service-section, .gulf-section, .guide-section
+   ─────────────────────────────────────────────────────────────── */
+.content-section {
+  position: relative;
+  overflow: hidden;
+  border: var(--border-content-section);
+  border-radius: var(--radius-section);
+  background: var(--bg-content-section);
+  box-shadow: var(--shadow-section);
+  padding: clamp(24px, 4vw, 42px);
+  margin-bottom: 34px;
+  scroll-margin-top: 150px;
+}
+
+.content-section.home-glow-section {
+  background:
+    var(--glow-line) center top 0px / 100% 8px no-repeat,
+    var(--glow-line-thin) center top 14px / calc(100% - 80px) 2px no-repeat,
+    var(--glow-line) center bottom 0px / 100% 8px no-repeat,
+    var(--glow-line-thin) center bottom 14px / calc(100% - 80px) 2px no-repeat,
+    var(--bg-content-section);
+}
+
+
+
+@media (max-width: 680px) {
+  .content-section {
+    border-radius: 14px;
+  }
+}
+
+/* ═══ Page Shell (توحيد shell containers) ═══ */
+.page-shell {
+  width: min(100%, var(--container-width));
+  margin: 0 auto;
+  padding: 64px var(--container-padding) 90px;
+}
+
+/* ═══ Page Hero (توحيد hero sections للصفحات الداخلية) ═══ */
+.page-hero {
+  position: relative;
+  overflow: hidden;
+  padding: 145px 0 78px;
+  border-bottom: 1px solid var(--glass-border);
+  background: linear-gradient(
+      135deg,
+      rgba(2, 2, 2, 0.82),
+      rgba(5, 5, 5, 0.94)
+    ),
+    url("../images/hero-des.jpeg") center / cover;
+}
+
+.page-hero::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  height: 120px;
+  background: linear-gradient(0deg, var(--bg-dark), transparent);
+  pointer-events: none;
+}
+
+.page-hero-inner {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 350px;
+  gap: 34px;
+  align-items: end;
+}
+
+.page-hero h1 {
+  max-width: 1050px;
+  margin: 0;
+  color: #fff;
+  font-size: clamp(1.9rem, 3.8vw, 3.45rem);
+  line-height: 1.25;
+  font-weight: 800;
+}
+
+.page-hero-lead {
+  max-width: 980px;
+  margin: 22px 0 0;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: clamp(0.95rem, 1.35vw, 1.08rem);
+  line-height: 2;
+}
+
+@media (max-width: 1100px) {
+  .page-hero-inner {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 680px) {
+  .page-hero {
+    padding-top: 125px;
+  }
+  .page-shell {
+    padding-top: 38px;
+  }
+}
+
+/* ═══ Global Grid Responsiveness ═══ */
+@media (max-width: 1200px) {
+  .pricing-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 992px) {
+  .hero-main {
+    padding: 3rem 2rem;
+    max-width: 90%;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .pricing-grid,
+  .footer-grid,
+  .services-grid,
+  .comparison-grid,
+  .analysis-wrapper {
+    grid-template-columns: 1fr !important;
+  }
+
+  .hero-main {
+    padding: 1.5rem 1rem;
+    border-radius: 15px;
+    width: 95%;
+  }
+
+  .logo-img {
+    height: 38px !important;
+  }
+}
+
+/* ═══ Unified Page Wrapper ═══ */
+.page-wrapper {
+  background: radial-gradient(circle at top right, rgba(255, 140, 0, 0.14), transparent 34%), var(--bg-dark);
+  color: var(--text-white);
+  min-height: 100vh;
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden !important;
+  position: relative;
+}
+
+/* ═══ Plain Section (Full-Width Stripe without Borders) ═══ */
+.plain-section {
+  width: 100vw;
+  margin-right: calc(50% - 50vw);
+  margin-left: calc(50% - 50vw);
+  padding: 70px 0;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  background-color: transparent;
+  position: relative;
+}
+
+.plain-section::before,
+.plain-section::after {
+  display: none !important;
+}
+
+.plain-section > .container,
+.plain-section .choose-grid,
+.plain-section .countries-grid,
+.plain-section .section-eyebrow,
+.plain-section h2 {
+  width: min(100%, var(--container-width));
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: var(--container-padding);
+  padding-left: var(--container-padding);
+}
+
