@@ -18,6 +18,25 @@
   <!-- Styles -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
   <link rel="stylesheet" href="css/style.css?v=1.2" />
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      corePlugins: { preflight: false },
+      theme: {
+        extend: {
+          colors: {
+            primary: '#ff8c00',
+            'primary-light': '#ffa54d',
+            'bg-dark': '#050505',
+            'bg-section': '#1a1a1a',
+            success: '#22c55e',
+            danger: '#ef4444',
+          }
+        }
+      }
+    }
+  </script>
 </head>
 
 <body>
@@ -30,7 +49,7 @@
       </div>
       <nav class="desktop-nav">
         <ul class="nav-list">
-          <li><a href="#intro">الرئيسية</a></li>
+          <li><a href="index.html">الرئيسية</a></li>
           <li class="has-dropdown">
             <a href="services.html">خدماتنا <i class="fas fa-chevron-down"></i></a>
             <ul class="dropdown">
@@ -187,7 +206,11 @@
 
   <!-- Custom Internal Page Styles -->
   <main class="page-wrapper saudi-page">
+    
     <header class="page-hero saudi-hero">
+      <img src="images/hero-des.jpeg" alt="Alqady Expert" class="hero-bg-img hero-desktop-img" style="z-index: 1;" />
+      <div class="hero-overlay" style="z-index: 2;"></div>
+
       <div class="container page-hero-inner saudi-hero-inner">
         <div>
           <div class="page-kicker"><i class="fas fa-location-dot"></i> Saudi Arabia 2026</div>
@@ -197,13 +220,12 @@
             السعودية وانواع الوظائف المطلوبة – وخطوات الحصول على الترخيص السعودي – ومتوسط رواتب التخصصات الطبية فى
             السعودية – وكيفية التقديم على شغل فى السعودية – مع توضيح ابرز التحديات وكيفية مواجهتها – ونستعرض ايضا اهم
             المميزات للعمل فى السعودية – والسلبيات الموجوده واهم النصائح المهنية والاجتماعية والرد على اشهر الاسئلة
-            الواردة لنا 2026ß
+            الواردة لنا 2026
           </p>
         </div>
         <aside class="hero-summary-card" aria-label="ملخص الدليل">
-
           <img src="images/saudiapage/خطوات الحصول علي الترخيص السعودي.jpeg" alt="خطوات الحصول على الترخيص"
-            style="width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);" />
+            style="width: 100%; height: auto; border-radius: 12px;" />
         </aside>
       </div>
     </header>
@@ -340,14 +362,14 @@
             <p>كل المميزات ترجع إلى سمعة المكان المراد العمل فيه وقوة العقد.</p>
           </article>
         </div>
-        <div class="note-box" style="margin-top: 22px;">
+        <div class="note-box mt-[22px]">
           <strong>تنبيه مهم</strong>
           <p class="guide-text u-m0">بعض الأماكن تكون محظورة السفر إليها وذلك لما لها من سمعة سيئة، لذلك يجب التأكد من
             جهة العمل والعقد قبل اتخاذ القرار.</p>
         </div>
         <div class="section-divider"></div>
         <h2 id="challenges" class="guide-anchor">أبرز التحديات التي قد تواجهك</h2>
-        <div class="cards-grid" style="margin-top: 22px;">
+        <div class="cards-grid mt-[22px]">
           <article class="info-card"><i class="fas fa-triangle-exclamation"></i>
             <h3>صعوبة اجتياز اختبار البرومترك من أول محاولة</h3>
             <p>الاختبار يحتاج مصادر قوية وخطة مذاكرة واضحة قبل الحجز.</p>
@@ -361,7 +383,7 @@
             <p>بيئة العمل تتطلب التزامًا مهنيًا كاملًا بلوائح المكان والدولة.</p>
           </article>
         </div>
-        <div class="note-box" style="margin-top: 22px;">
+        <div class="note-box mt-[22px]">
           <strong>نصيحة مهمة</strong>
           <p class="guide-text u-m0">استعن بمكتب القاضي داتا فلو لتسهيل الإجراءات إن لم تكن لديك الخبرة الكافية، فهذا
             يوفر عليك جهدًا وخسائر مالية واردة. بعض الأماكن تكون محظورة السفر إليها بسبب السمعة السيئة، لذلك التحري مهم
@@ -371,8 +393,8 @@
       </section>
 
       <section id="professional-advice" class="content-section guide-section home-glow-section">
-        <div style="display: flex; flex-wrap: wrap; flex-direction: row; gap: 2rem; align-items: center;">
-          <div style="flex: 1 1 500px;">
+        <div class="flex flex-wrap flex-row gap-8 items-center">
+          <div class="flex-[1_1_500px]">
             <p class="section-eyebrow">قبل السفر</p>
             <h2>نصائح مهنية واجتماعية قبل السفر إلى السعودية</h2>
             <ul class="guide-list">
@@ -383,16 +405,16 @@
               <li>احرص على معرفة ثقافة العمل السعودى.</li>
             </ul>
           </div>
-          <div style="flex: 1 1 450px; margin-top: 0;">
+          <div class="flex-[1_1_450px] mt-0">
             <img src="images/saudiapage/اهم النصائح.jpeg" alt="أهم النصائح قبل السفر"
-              style="width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);" />
+              class="w-full h-auto rounded-xl shadow-[0_4px_15px_rgba(0,0,0,0.1)]" />
           </div>
         </div>
       </section>
 
       <section id="license" class="content-section guide-section home-glow-section">
-        <div style="display: flex; flex-wrap: wrap; flex-direction: row; gap: 2rem; align-items: center;">
-          <div style="flex: 1 1 500px;">
+        <div class="flex flex-wrap flex-row gap-8 items-center">
+          <div class="flex-[1_1_500px]">
             <p class="section-eyebrow">من أول ورقة لحد الترخيص</p>
             <h2>خطوات الحصول على ترخيص مزاولة المهنة في السعودية</h2>
             <div class="timeline">
@@ -427,17 +449,17 @@
               </div>
             </div>
           </div>
-          <div style="flex: 1 1 450px; margin-top: 0;">
+          <div class="flex-[1_1_450px] mt-0">
             <img src="images/saudiapage/خطوات الحصول علي الترخيص السعودي للمهن الطبية.jpeg"
               alt="خطوات الحصول على الترخيص"
-              style="width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);" />
+              class="w-full h-auto rounded-xl shadow-[0_4px_15px_rgba(0,0,0,0.1)]" />
           </div>
         </div>
       </section>
 
       <section id="application-steps" class="content-section guide-section home-glow-section">
-        <div style="display: flex; flex-wrap: wrap; flex-direction: row; gap: 2rem; align-items: center;">
-          <div style="flex: 1 1 500px;">
+        <div class="flex flex-wrap flex-row gap-8 items-center">
+          <div class="flex-[1_1_500px]">
             <p class="section-eyebrow">خطة تنفيذ القاضي داتا فلو</p>
             <h2>مراحل وخطوات التقديم على خدمات الداتا فلو والبرومترك والترخيص</h2>
             <div class="timeline">
@@ -491,9 +513,9 @@
               </div>
             </div>
           </div>
-          <div style="flex: 1 1 450px; margin-top: 0;">
+          <div class="flex-[1_1_450px] mt-0">
             <img src="images/saudiapage/خطوات التقديم علي الداتافلو.jpeg" alt="خطوات التقديم على الداتافلو"
-              style="width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);" />
+              class="w-full h-auto rounded-xl shadow-[0_4px_15px_rgba(0,0,0,0.1)]" />
           </div>
         </div>
       </section>
@@ -501,9 +523,9 @@
       <section id="faq" class="content-section guide-section home-glow-section">
         <p class="section-eyebrow">Most Questions</p>
         <h2>أشهر الأسئلة الواردة حول السفر والعمل في السعودية</h2>
-        <div style="margin-bottom: 2rem;">
+        <div class="mb-8">
           <img src="images/saudiapage/الاسئلة الشائعة.jpeg" alt="الأسئلة الشائعة"
-            style="width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);" />
+            class="w-full h-auto rounded-xl shadow-[0_4px_15px_rgba(0,0,0,0.1)]" />
         </div>
         <div class="accordion">
           <details open>
@@ -663,8 +685,8 @@
       </section>
 
       <section id="why-us"
-        class="services-section services-section-plain services-section-full home-glow-section home-glow-section--viewport home-glow-section--borderless"
-        style="background: var(--glow-line) center top 0px / 100% 8px no-repeat, var(--glow-line-thin) center top 14px / calc(100% - 80px) 2px no-repeat, var(--glow-line) center bottom 0px / 100% 8px no-repeat, var(--glow-line-thin) center bottom 14px / calc(100% - 80px) 2px no-repeat, transparent; padding: 100px 0; margin-bottom: 60px;">
+        class="services-section services-section-plain services-section-full home-glow-section home-glow-section--viewport home-glow-section--borderless py-[100px] mb-[60px]"
+        style="background: var(--glow-line) center top 0px / 100% 8px no-repeat, var(--glow-line-thin) center top 14px / calc(100% - 80px) 2px no-repeat, var(--glow-line) center bottom 0px / 100% 8px no-repeat, var(--glow-line-thin) center bottom 14px / calc(100% - 80px) 2px no-repeat, transparent;">
         <div class="container fade-in text-center">
           <header class="section-header">
             <p class="section-eyebrow">وانت معنا</p>
@@ -795,9 +817,9 @@
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen></iframe>
         </div>
-        <p class="guide-text" style="margin: 16px 0 0; text-align: center;"><a
+        <p class="guide-text mt-4 text-center"><a
             href="https://www.youtube.com/watch?v=G2bON9G-dpw" target="_blank" rel="noopener noreferrer"
-            style="color: var(--primary); font-weight: 800;">لو الفيديو لم يظهر اضغط هنا لمشاهدته على يوتيوب</a></p>
+            class="text-primary font-extrabold">لو الفيديو لم يظهر اضغط هنا لمشاهدته على يوتيوب</a></p>
       </section>
 
       <section id="tips" class="content-section guide-section home-glow-section">
@@ -830,11 +852,11 @@
               <li>ساعات العمل ونظام الإجازات</li>
               <li>الحقوق والواجبات وفقًا لنظام العمل السعودي</li>
             </ul>
-            <div class="note-box" style="margin-top: 18px;"><strong>💡 نصيحة</strong>
+            <div class="note-box mt-[18px]"><strong>💡 نصيحة</strong>
               <p class="guide-text u-m0">لا توقع أي عقد قبل مراجعته بدقة، ويفضل أن تستشير مختصًا في قوانين العمل لضمان
                 حقوقك او ارساله لنا ونفيدك ان شاء الله</p>
             </div>
-            <h3 style="margin-top: 24px;">استخراج التأشيرة وتقديم المستندات</h3>
+            <h3 class="mt-6">استخراج التأشيرة وتقديم المستندات</h3>
             <p class="guide-text">بعد توقيع العقد، سيقوم صاحب العمل بإصدار تأشيرة العمل لك، ولكن عليك تجهيز بعض
               المستندات المهمة، مثل:</p>
             <ul class="guide-list">
@@ -843,10 +865,10 @@
               <li>الفيش الجنائي</li>
               <li>شهادة الفحص الطبي لإثبات لياقتك الصحية للعمل الصادره من وزارة الصحة</li>
             </ul>
-            <h3 style="margin-top: 24px;">التسجيل في الهيئة السعودية للتخصصات الصحية (SCFHS)</h3>
+            <h3 class="mt-6">التسجيل في الهيئة السعودية للتخصصات الصحية (SCFHS)</h3>
             <p class="guide-text">للحصول على رخصة مزاولة المهنة في السعودية، يجب أن تسجل في الهيئة السعودية للتخصصات
               الصحية عبر منصة ممارس بلس للحصول على الترخيص الذي يسمح لك بممارسة المهنة رسميًا</p>
-            <div class="note-box" style="margin-top: 18px;"><strong>💡 تذكّر</strong>
+            <div class="note-box mt-[18px]"><strong>💡 تذكّر</strong>
               <p class="guide-text u-m0">قد تستغرق هذه الإجراءات بعض الوقت، لذا ابدأ بها مبكرًا لتجنب أي تأخيرات غير
                 متوقعة.</p>
             </div>
@@ -863,7 +885,7 @@
                 المرضية.</li>
               <li>نظام التأمين الصحي: معظم المستشفيات توفر تأمينًا صحيًا شاملًا لك ولعائلتك</li>
             </ul>
-            <h3 style="margin-top: 24px;">التوثيق الطبي والمسؤوليات المهنية</h3>
+            <h3 class="mt-6">التوثيق الطبي والمسؤوليات المهنية</h3>
             <p class="guide-text">في السعودية، هناك تركيز كبير على التوثيق الطبي الإلكتروني، لذا يجب أن تتعلم كيفية
               التعامل مع السجلات الإلكترونية للمرضى وتسجيل جميع الإجراءات الطبية بشكل دقيق.</p>
             <p class="guide-text">كما أن هناك قوانين صارمة فيما يخص:</p>
@@ -883,7 +905,7 @@
               <li>الطعام والمصاريف اليومية</li>
               <li>أي رسوم حكومية مفاجئة</li>
             </ul>
-            <h3 style="margin-top: 24px;">معرفة تكاليف المعيشة في السعودية</h3>
+            <h3 class="mt-6">معرفة تكاليف المعيشة في السعودية</h3>
             <p class="guide-text">تختلف تكلفة المعيشة حسب المدينة التي ستعمل بها. على سبيل المثال:</p>
             <ul class="guide-list">
               <li>الرياض وجدة: مدينتان كبيرتان وتكلفة السكن مرتفعة نسبيًا.</li>
@@ -894,7 +916,7 @@
               <p class="guide-text u-m0">بعض المستشفيات توفر سكنًا مجانيًا للموظفين، لذا تأكد من تفاصيل عقدك قبل أن
                 تستأجر سكنًا خاصًا</p>
             </div>
-            <h3 style="margin-top: 24px;">فتح حساب بنكي وإدارة الأموال</h3>
+            <h3 class="mt-6">فتح حساب بنكي وإدارة الأموال</h3>
             <p class="guide-text">بمجرد وصولك، قم بفتح حساب بنكي في أحد البنوك السعودية مثل:</p>
             <ul class="guide-list">
               <li>بنك الراجحي</li>
@@ -962,9 +984,8 @@
         </div>
       </section>
 
-      <section class="gulf-section home-glow-section watermark-bg center"
-        style="margin-top: 40px; margin-bottom: 40px; padding: 50px 30px;">
-        <div class="cta-box" style="margin-bottom: 40px;">
+      <section class="gulf-section home-glow-section watermark-bg center mt-10 mb-10 py-[50px] px-[30px]">
+        <div class="cta-box mb-10">
           <img src="images/logo-1.png" alt="Elkady Dataflow" loading="lazy">
           <div>
             <p class="section-eyebrow">Elkady Dataflow</p>
@@ -978,8 +999,7 @@
         <div class="container fade-in">
           <p class="section-eyebrow">نقدر نساعدك فى</p>
           <h2>خدمات الداتافلو والبرومترك لكل دول الخليج</h2>
-          <p class="services-keywords"
-            style="text-align: justify; text-justify: inter-word; -moz-text-align-last: center; text-align-last: center; line-height: 1.8;">
+          <p class="services-keywords text-justify leading-[1.8]" style="-moz-text-align-last: center; text-align-last: center;">
             عمل داتا فلو لكل الدول – داتا فلو السعودية – داتا فلو الإمارات – داتا فلو دبي – داتا فلو أبوظبي – داتا فلو
             عمان – داتا فلو البحرين – داتا فلو قطر – حجز امتحان البرومترك لكل التخصصات – برومترك الاطباء – برومترك صيدلة
             – برومترك علاج طبيعي – برومترك أخصائي تمريض – برزمترك فني تمريض – برومترك الفنيين – برومترك التمريض – بيرسون
@@ -995,9 +1015,9 @@
             البيرسون فيو لفني تمريض – أسئلة امتحان البيرسون فيو للفنيين – dataflow – prometric – pearson vue – حجز انجاز
             و تساهيل – اصدار شهادات الخبرة لمختلف التخصصات – اصدار الشهادات العلمية لمختلف التخصصات
           </p>
-          <div style="margin-top: 2rem;">
+          <div class="mt-8">
             <img src="images/saudiapage/نقدر نساعدك في اي.jpeg" alt="نقدر نساعدك في اي"
-              style="width: 100%; max-width: 800px; height: auto; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); margin: 0 auto; display: block;" />
+              class="w-full max-w-[800px] h-auto rounded-xl shadow-[0_4px_15px_rgba(0,0,0,0.1)] mx-auto block" />
           </div>
         </div>
       </section>

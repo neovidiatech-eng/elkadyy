@@ -1,11 +1,11 @@
 /* ═══════════════════════════════════════════════════════════════════
-   STYLE.CSS — Main Stylesheet Entrypoint (المستورد الرئيسي)
+   STYLE.CSS — Main Stylesheet Entrypoint
    ─────────────────────────────────────────────────────────────────
    يستورد هذا الملف ملفات التصميم الأخرى بالترتيب الصحيح.
    جميع الصفحات التي ترتبط بهذا الملف ستعمل تلقائياً بالنظام الجديد.
    ═══════════════════════════════════════════════════════════════════ */
 
-@import url("variables.css");
-@import url("base.css");
-@import url("layout.css");
-@import url("components.css");
+@import url("src/variables.css");
+@import url("src/base.css");
+@import url("src/layout.css");
+@import url("src/components.css");
